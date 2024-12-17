@@ -4,6 +4,7 @@ const bodyParser = require('body-parser');
 const cors = require('cors');
 const bcrypt = require('bcryptjs');
 require('dotenv').config();
+const path = require("path");
 const userRoutes = require("./routes/userRoutes");
 const authRoutes = require('./routes/auth');
 const bookRoutes = require("./routes/book");
@@ -13,9 +14,14 @@ const recommendationsRoutes = require('./routes/recommendations');
 const reviewRoutes = require('./routes/reviewRoutes');
 
 const app = express();
+const port = process.env.PORT || 5000;
+
+// Serve static files from the React build directory
+app.use(express.static(path.join(__dirname, "build")));
 
 
-app.get('/',(req,res) =>{res.send('hello root node')});
+
+//app.get('/',(req,res) =>{res.send('hello root node')});
 
 // Middleware
 app.use(cors());
@@ -29,11 +35,17 @@ app.use('/api/recommendations', recommendationsRoutes);
 app.use('/api/books', bookRoutes); // Use the book routes under the /api/books path
 app.use('/api',userRoutes);
 app.use('/api/users',userRoutes);
-//app.use('/api/review',bookRoutes);
-//app.use('/api/socialcard',socialRoutes)
+
+
 app.use('/api/socialcard', reviewRoutes);
 // Use the social card routes
 //app.use('/api/social-cards', socialcardRoutes);
+
+// Serve index.html for all non-API routes
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname, "build", "index.html"));
+});
+
 
 // Routes
 // MongoDB Connection
