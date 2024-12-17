@@ -1,0 +1,129 @@
+/* General Styling */
+.homepage-container {
+    font-family: Arial, sans-serif;
+    background-color: #faf7f5;
+    background-image: url('./download.jpg');
+    padding: 20px;
+  }
+  
+  .homepage-header {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #382110;
+  }
+  
+  /* Announcement Banner */
+  .announcement-banner {
+    background-color: #f0ede6;
+    text-align: center;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 10px;
+  }
+  
+  .announcement-banner h2 {
+    color: #382110;
+  }
+  
+  /* Discover Section */
+  .discover-section {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 400px;
+    margin: 20px auto;
+    text-align: center;
+  }
+  
+  .discover-section h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+  }
+  
+  .btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .btn-icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+  }
+  
+  .btn-amazon {
+    background-color: #ffd700;
+    color: #000;
+  }
+  
+  .btn-apple {
+    background-color: #333;
+    color: #fff;
+  }
+  
+  .btn-email {
+    background-color: #382110;
+    color: #fff;
+  }
+  
+  .terms {
+    font-size: 0.9rem;
+    margin: 10px 0;
+  }
+  
+  .signin-link {
+    font-size: 1rem;
+  }
+  
+  .signin-link a {
+    color: #382110;
+    text-decoration: none;
+  }
+  
+  /* Info Section */
+  .info-section {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+    gap: 20px;
+  }
+  
+  .info-box {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    flex: 1;
+  }
+  
+  .info-box h4 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+  }
+  
+  /* Recommendation Section */
+  .recommendation-section {
+    text-align: center;
+    margin-top: 30px;
+  }
+  
+  .book-carousel {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 10px;
+  }
+  
+  .book-card {
+    width: 100px;
+    height: 150px;
+    border-radius: 5px;
+  }
+  
